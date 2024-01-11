@@ -1,0 +1,27 @@
+:root {
+    --title: hsl(266, 89%, 65%);
+    --subtitle: hsl(268, 87%, 56%); 
+    --paragraph: hsl(244, 17%, 61%);
+    --white: hsl(244, 0%, 100%);
+    --blue: hsl(216, 84%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    background-color: var(--white)
+}
