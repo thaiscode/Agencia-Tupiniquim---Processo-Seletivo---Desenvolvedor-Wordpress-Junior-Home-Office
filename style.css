@@ -1,9 +1,12 @@
 :root {
-    --title: hsl(266, 89%, 65%);
-    --subtitle: hsl(268, 87%, 56%); 
-    --paragraph: hsl(244, 17%, 61%);
-    --white: hsl(244, 0%, 100%);
-    --blue: hsl(216, 84%, 98%);
+    --title: rgba(91, 18, 163, 1);
+    --subtitle: rgba(85, 20, 165, 1); 
+    --paragraph: rgba(167, 166, 178, 1);
+    --white: rgba(255, 255, 255, 1);
+    --blue: rgba(86, 145, 248, 1);
+    --border: rgba(219, 232, 252, 1);
+    --gradient: linear-gradient(to right, rgba(86, 113, 241, 1), rgba(39, 224, 252, 1));
+    --black: rgb(0, 0, 0);
 }
 
 * {
@@ -17,11 +20,486 @@ img {
     height: auto;
 }
 
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, button:hover, li:hover, .social:hover, .footer__principal p:hover, .main__register_box:hover {
+    cursor: pointer;
+    color: var(--paragraph);
+}
+
+h1 {
+    font-size: clamp(0.9rem, 3rem, 10rem);
+    text-align: left;
+    text-transform: capitalize;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--title);
+}
+
+p {
+    font-size: clamp(0.5rem, 1rem, 1rem);
+    line-height: 120%;
+    font-weight: 500;
+    color: var(--paragraph);
+}
+
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+
 body {
     width: 100vw;
     height: auto;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     text-align: center;
-    background-color: var(--white)
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+/* Mobile first */
+
+/* HEADER */ 
+.header {
+    margin-bottom: 5rem;
+}
+
+.header__nav {
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.header__menu-icon {
+    width: 20px;
+}
+
+.nav__menu-area {
+    justify-content: left;
+    align-items: center;
+    padding: 1rem;
+}
+
+ul li{
+   margin-right: 3.5rem;
+   color: var(--paragraph);
+}
+
+.nav__login-area img{
+    height: 5%;
+    margin-right: 1rem;
+}
+
+.nav__button--sign-in {
+    border: none;
+    background: none;
+    color: var(--title);
+    font-weight: 700;
+    margin: 0 3rem 0 0;
+}
+
+.nav__button--sign-up {
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    letter-spacing: 0.5px;
+    color: var(--blue);
+    background: none;
+    font-weight: 700;
+}
+
+.header__content { 
+    margin: 0 auto;
+    text-align: left;
+}
+
+.header__content_text p {
+    margin: 2rem 0 1.5rem 0;
+    
+}
+
+.header__button, .main__download_button-1, .main__download_button-2 {
+    padding: 0.5rem 1.5rem;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: clamp(1rem, 1.2rem, 1.5rem);
+    color: var(--white);
+    background: var(--gradient);
+    border: none;
+    margin-bottom: 2rem;
+}
+
+/* MAIN */
+
+.main__how-to-get {
+   margin: 0 auto;
+}
+
+.main__how-to-get_bar, .main__car_bar, .main__download_bar, .main__commitment_bar, .main__register_bar {
+    max-width: 115px;
+}
+
+.main__how-to-get h2 {
+    margin: 3rem 0 5rem;
+}
+
+.main__how-to-get_box-cards {
+    margin-bottom: 3rem;
+}
+
+.main__how-to-get_box-cards h3{
+    margin: 2rem;
+}
+
+.main__car {
+    justify-content: left;
+}
+
+.main__car_text, .main__commitment_text {
+    max-width: 70vw;
+    margin: 0 auto;
+}
+
+.main__car_text p, .main__commitment_text p{
+    margin: 5rem 0 2rem 0;
+    text-align: left;
+}
+
+.main__car_text a, .main__commitment_text a{
+    text-align: left;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.main__car_img-car, .main__commitment_img, .main__download_img {
+    max-height: 90vh;
+    order: 1;
+}
+
+.main__commitment {
+    justify-content: right;
+}
+
+.main__commitment_bar, .main__download_bar {
+    margin: 3rem 0;
+} 
+
+.main__commitment_text .link-here{
+    text-decoration: underline;
+} 
+
+.main__commitment_text h3 {
+    text-align: left;
+}
+
+.see-all-link span {
+    font-size: 13px;
+    margin-left: 0.5rem;
+}
+
+.main__download {
+    height: 900px;
+    flex-direction: column;
+}
+
+.main__download_bar{
+    filter: grayscale(100%);
+ }
+
+.main__download_text {
+    max-width: 70vw;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.main__download_text h3{
+    margin-bottom: 3rem;
+}
+
+.main__download_button-1, .main__download_button-2 {
+    max-width: 157px;
+    border: none;
+    background: var(--black);
+    color: var(--white);
+    font-weight: 400;
+    font-size: 0.7rem;
+    text-align: left;
+    width: 40vw;
+    height: 50px;
+    align-items: center;
+    padding-left: 3rem;
+    
+}
+
+.main__download_button-1 {
+    background: url(./images/Triângulo\ -\ botão.png) no-repeat var(--black) left 10px center;
+    background-size: 30px;
+}
+
+.main__download_button-2 {
+    background: url(./images/Play\ app\ -\ botão.png) no-repeat var(--black) left 10px center;
+    background-size: 30px;
+}
+
+.main__download_button-1 span, .main__download_button-2 span {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.main__download_button img{
+    width: 15%;
+}
+
+.main__register {
+    width: 100vw;
+    text-align: left;
+}
+
+.main__register_box_iten {
+    align-items: center;
+}
+
+.main__register_box_iten h3{
+    margin-right: 2rem;
+}
+
+.main__register_arrow {
+    width: 30px;
+}
+
+/* FOOTER */
+
+.footer {
+    background: url(./images/fundo-footer-teste-programador.png.jpg) no-repeat var(--title);
+    background-size: 100%;
+    color: var(--white);
+    align-items: center;
+}
+
+.footer__principal {
+    justify-content: space-between;
+}
+
+.footer__menu {
+    max-width: 35vw;
+    padding-top: 5rem;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: left;
+}
+
+.footer__menu p {
+    color: var(--white);
+    margin: 1.5rem 0;
+    font-weight: 400;
+}
+.footer__menu p span {
+    margin-right: 0.5rem;
+}
+
+.footer__menu img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.footer__menu_list, .footer__menu_list_icon{
+    margin: 0 auto;
+}
+
+.footer__menu_list h3 {
+    padding: 1.5rem 0;
+}
+
+.footer__menu_list h3, .footer__menu_list ul li{
+    color: var(--white);
+    font-weight: 400;
+}
+
+.footer__menu_list ul li {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer__menu_list_iten {
+    max-width: 35vw;
+    text-align: left;
+    margin: 0 auto;
+}
+
+hr {
+    opacity: 0.4;
+}
+
+.footer__copy_text {
+    margin-top: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__copy_text p{
+    color: var(--white);
+    font-size: 0.8rem;
+}
+
+.social {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+/*DROPDOWN MENU*/
+
+.nav__dropdown {
+    display: none;
+}
+
+/* TOGGLE JS*/
+
+.active {
+    display: inline;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 1000px){
+    /* HEADER */
+
+    .nav__menu-area ul{
+        padding-right: 10rem;
+    }
+
+    .header__menu--dropdown {
+        display: none;
+    }
+
+    .nav__dropdown {
+        display: flex;
+    }
+/* ^ END DROPDOWN MENU ^ */
+
+    .header__content {
+        justify-content: space-between;
+    }
+
+    .header__content img{
+        width: 45%;
+    }
+
+    .header__content_text {
+        max-width: 25vw;
+        margin-left: 9.5rem;
+    }
+
+    /* MAIN */
+
+    .main__how-to-get_bar{
+        width: 8%;
+        margin-right: 140px;
+    }
+
+    .main__how-to-get_box-cards {
+        max-width: 15vw;
+    }
+
+    .main__car, .main__commitment {
+        align-items: center;
+    }
+    
+    .main__car_text, .main__commitment_text {
+        max-width: 30vw;
+        order: 2;
+        text-align: left;
+    }
+
+    .main__car_img-car, .main__commitment_img{
+        order: 1;
+    }
+
+    .main__commitment {
+        align-items: flex-end;   
+    }
+
+    .main__commitment_text {
+        max-width: 40vw;
+        order: 1;
+    }
+
+    .main__download {
+        background: url(./images/img-fundo-4-teste-programador.png) top no-repeat;
+        background-size: 100%;
+        align-items: flex-end;
+    } 
+
+    .main__download_text {
+        margin: 11rem 15rem 0 0;
+    }
+
+    .main__register {
+        padding-top: 11rem;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        justify-content: space-between;
+        padding: 7rem 10rem 2rem 10rem;
+    }
+    .footer__menu {
+        margin: unset;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-top: 0;
+    }
+
+    .footer__menu_list {
+        margin: unset;
+    }
+
+    .footer__menu_list_iten:first-child{
+        margin-right: 5rem;
+    }
+    
+    .footer__menu_list_iten h3{
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 999px){
+/* HEADER */
+
+.nav__menu-area, .nav__menu-area ul {
+    flex-direction: column;
+}
+
+.nav__menu-area ul li{
+    margin: 0 0 0.5rem 0;
+}
+
+.nav__menu-area ul{
+    margin-bottom: 1rem;
+}
+
+.nav__dropdown {
+    position: absolute;
+    top: 7rem;
+    width: 88vw;
+    max-width: 300px;
+    max-height: 50vh;
+    border: 1px solid var(--title);
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.header__content, .main__how-to-get { 
+    max-width: 50vw;
+}
 }
