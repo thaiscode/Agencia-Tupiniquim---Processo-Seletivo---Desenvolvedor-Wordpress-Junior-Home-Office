@@ -17,10 +17,9 @@ Considerei começar o projeto utilizando a técnica mobile first (375px) para to
 
 ### Screenshot
 
-![Desktop](./screenshot/Desktop.png)
-![Desktop error status](./screenshot/Desktop-error.png)
-![Mobile](./screenshot/Mobile.png)
-![Mobile error status](./screenshot/Mobile-error.png)
+![Desktop](./screenshots/Desktop%201440px.png)
+![Mobile](./screenshots/Mobile%20375px.png)
+![Menu mobile](./screenshots/Menu%20mobile.png)
 
 ### Links
 
